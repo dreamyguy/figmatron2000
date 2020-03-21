@@ -1,0 +1,41 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# production
+/build
+/web/build
+/dist
+
+# cache
+.scssc
+.sass-cache
+
+# dependencies
+/node_modules
+/web/node_modules
+server/sanity/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# environments
+.env
+
+# gatsby files
+.cache/
+public
+
+# misc
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
