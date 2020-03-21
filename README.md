@@ -5,6 +5,7 @@
 ## Goals
 
 **1. Fetch the data from Figma's API.** ✅
+
 **2. Extract the design tokens from the retrieved data as variables**, and do things with them. Like:
 
   - Generate a **`variables.json`** file, as a backup.
