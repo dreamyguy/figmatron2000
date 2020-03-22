@@ -1,5 +1,5 @@
-import config from '../../config.mjs';
-import serverPort from './serverPort.mjs';
+import config from './../../config.mjs';
+import serverPort from './serverPortUtil.mjs';
 
 const {
   apiUrl,

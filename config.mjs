@@ -40,6 +40,9 @@ const envProd = 'yolo.io';
 const envQa = 'qa.yolo.io';
 const envTest = 'test.yolo.io';
 
+// export vars
+const exportPath = 'export/designTokens';
+
 const config = {
   apiEnabled: true,
   // Access Figma directly or a local mock through 'JSON Server'
@@ -50,6 +53,7 @@ const config = {
     test: `https://${envTest}/api/v1`,
   },
   currentEnv,
+  exportPath,
   figmaClientId,
   hostnames: {
     prod: envProd,
