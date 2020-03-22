@@ -1,0 +1,82 @@
+[
+  {
+    "colorName": "cl-passion-fruit",
+    "colorRgba": "rgba(255, 162, 0, 255)",
+    "colorHex": "#ffa200"
+  },
+  {
+    "colorName": "cl-peach",
+    "colorRgba": "rgba(250, 143, 32, 255)",
+    "colorHex": "#fa8f20"
+  },
+  {
+    "colorName": "cl-tangerine",
+    "colorRgba": "rgba(229, 98, 26, 255)",
+    "colorHex": "#e5621a"
+  },
+  {
+    "colorName": "cl-raspberry",
+    "colorRgba": "rgba(253, 56, 106, 255)",
+    "colorHex": "#fd386a"
+  },
+  {
+    "colorName": "cl-tuesday-morning",
+    "colorRgba": "rgba(159, 72, 133, 255)",
+    "colorHex": "#9f4885"
+  },
+  {
+    "colorName": "cl-tuesday-afternoon",
+    "colorRgba": "rgba(138, 51, 112, 255)",
+    "colorHex": "#8a3370"
+  },
+  {
+    "colorName": "cl-grape",
+    "colorRgba": "rgba(78, 31, 65, 255)",
+    "colorHex": "#4e1f41"
+  },
+  {
+    "colorName": "cl-baby-boy",
+    "colorRgba": "rgba(87, 149, 242, 255)",
+    "colorHex": "#5795f2"
+  },
+  {
+    "colorName": "cl-lime",
+    "colorRgba": "rgba(121, 183, 0, 255)",
+    "colorHex": "#79b700"
+  },
+  {
+    "colorName": "cl-kiwi",
+    "colorRgba": "rgba(87, 132, 0, 255)",
+    "colorHex": "#578400"
+  },
+  {
+    "colorName": "cl-sand",
+    "colorRgba": "rgba(243, 243, 235, 255)",
+    "colorHex": "#f3f3eb"
+  },
+  {
+    "colorName": "cl-foam",
+    "colorRgba": "rgba(233, 231, 219, 255)",
+    "colorHex": "#e9e7db"
+  },
+  {
+    "colorName": "cl-latte",
+    "colorRgba": "rgba(129, 113, 104, 255)",
+    "colorHex": "#817168"
+  },
+  {
+    "colorName": "cl-tiramisu",
+    "colorRgba": "rgba(108, 92, 85, 255)",
+    "colorHex": "#6c5c55"
+  },
+  {
+    "colorName": "cl-chocolate",
+    "colorRgba": "rgba(54, 48, 44, 255)",
+    "colorHex": "#36302c"
+  },
+  {
+    "colorName": "cl-coffee",
+    "colorRgba": "rgba(77, 49, 0, 255)",
+    "colorHex": "#4d3100"
+  }
+]

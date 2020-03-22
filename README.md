@@ -8,9 +8,9 @@
 
 **2. Extract the design tokens from the retrieved data as variables**, and do things with them. Like:
 
-  - Generate a **`variables.json`** file, as a backup.
-  - Generate a **`variables.js`** file.
-  - Generate a **`variables.scss`** file.
+  - Generate a **`designTokens.json`** file, as a backup. ✅
+  - Generate a **`designTokens.js`** file.
+  - Generate a **`designTokens.scss`** file.
   - Create versions of generated files at every release.
 
 **3. The ultimate goal is to use versioned files containing design tokens provided by Figma at the frontend.**
@@ -23,6 +23,7 @@ But there will surely be tests and a demo page in this repo, for validation purp
 
 - A **`.env`** file (untracked by **`git`**) that stores **Figma**'s `token` and `cliend id`.
 - The connection to the **Figma's API**.
+- Generate a **`designTokens.json`** file, as a backup.
 - Configuration to some of the upcoming features.
 
 ## License

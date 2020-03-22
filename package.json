@@ -30,6 +30,7 @@
     "server:json": "json-server --watch server/json/db.json",
     "setup": "npm i",
     "test": "jest --verbose --watch",
+    "output": "node --experimental-modules src/main.mjs",
     "test:e2e:open": "cypress open --config fileServerFolder=tests/e2e/cypress",
     "test:e2e:run": "cypress run --config fileServerFolder=tests/e2e/cypress",
     "test:travis": "jest"
