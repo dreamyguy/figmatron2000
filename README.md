@@ -10,7 +10,8 @@
 
   - Generate a **`designTokens.json`** file, as a backup. ✅
   - Generate a **`designTokens.js`** file.
-  - Generate a **`designTokens.scss`** file.
+  - Generate a **`designTokens.scss`** file. ✅
+  - Generate a **`designTokens.less`** file. ✅
   - Create versions of generated files at every release.
 
 **3. The ultimate goal is to use versioned files containing design tokens provided by Figma at the frontend.**
@@ -24,6 +25,8 @@ But there will surely be tests and a demo page in this repo, for validation purp
 - A **`.env`** file (untracked by **`git`**) that stores **Figma**'s `token` and `cliend id`.
 - The connection to the **Figma's API**.
 - Generate a **`designTokens.json`** file, as a backup.
+- Generate a **`designTokens.scss`** file.
+- Generate a **`designTokens.less`** file.
 - Configuration to some of the upcoming features.
 
 ## License
