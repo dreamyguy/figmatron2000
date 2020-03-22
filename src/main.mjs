@@ -13,8 +13,10 @@ const {
 
 // --------------- data handling - begin --------------- //
 
-// Path to file we'll be exporting the token data to
-const exportPath = 'export/designTokens.json';
+// Paths to files we'll be exporting the token data to
+const exportPathJson = 'export/designTokens.json';
+const exportPathScss = 'export/designTokens.scss';
+const exportPathLess = 'export/designTokens.less';
 // The name of the CANVAS containing the design tokens
 const canvasTokensName = 'Tokens';
 // The name of the COMPONENT / INSTANCE containing the color definitions
@@ -51,8 +53,6 @@ const rgbToHex = (r, g, b) => {
 
 // handle the data and export it to the file defined by 'exportPath'
 const handleData = (response, mode) => {
-  // count ellapsed time -> start
-  const start = Date.now();
   // parse response if its format is JSON
   let data = null;
   if (mode === '[handleData] server [figma]') {
@@ -99,28 +99,55 @@ const handleData = (response, mode) => {
     }
     return null;
   };
-  // extract values and generate color variable definitions
-  const swatchesColorsExtracted = swatchesColors.map(c => ({
+  // extract values and generate color variable definitions to JSON
+  const swatchesColorsExtractedJson = swatchesColors.map(c => ({
     colorName: getColorName(c),
     colorRgba: getColorRgba(c),
     colorHex: getColorHex(c),
   }));
-  // write to file
+  // extract values and generate color variable definitions to SCSS
+  const swatchesColorsExtractedScss = swatchesColors.map(c => `$${getColorName(c)}: ${getColorHex(c)};`);
+  // extract values and generate color variable definitions to LESS
+  const swatchesColorsExtractedLess = swatchesColors.map(c => `@${getColorName(c)}: ${getColorHex(c)};`);
+  // write to JSON
   fs.writeFile(
-    exportPath,
-    prettyJSON(swatchesColorsExtracted),
+    exportPathJson,
+    prettyJSON(swatchesColorsExtractedJson),
     'utf8',
     (err) => {
       if (err) {
-        console.log(`[handleData]: Export error! ${err}`);
+        console.log(`[handleData]: Export JSON error! ${err}`);
       };
+      console.log(`🤖 Successfully exported '${exportPathJson}'`);
       return null;
     }
   );
-  // count ellapsed time -> end
-  const end = Date.now();
-  const time = ((end - start) / 1000).toFixed(2);
-  console.log('✨ Done in:', `${time}s`);
+  // write to SCSS
+  fs.writeFile(
+    exportPathScss,
+    swatchesColorsExtractedScss.join('\n'),
+    'utf8',
+    (err) => {
+      if (err) {
+        console.log(`[handleData]: Export SCSS error! ${err}`);
+      };
+      console.log(`🤖 Successfully exported '${exportPathScss}'`);
+      return null;
+    }
+  );
+  // write to LESS
+  fs.writeFile(
+    exportPathLess,
+    swatchesColorsExtractedLess.join('\n'),
+    'utf8',
+    (err) => {
+      if (err) {
+        console.log(`[handleData]: Export LESS error! ${err}`);
+      };
+      console.log(`🤖 Successfully exported '${exportPathLess}'`);
+      return null;
+    }
+  );
 };
 
 // --------------- data handling - end ----------------- //
