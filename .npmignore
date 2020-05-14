@@ -29,6 +29,7 @@
 .editorconfig
 .eslintignore
 .eslintrc.js
+.nvmrc
 .prettierrc
 .travis.yml
 /server
