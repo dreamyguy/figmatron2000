@@ -1,0 +1,59 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# This is a generic file with usual suspects.
+# Some of them might not be relevant for this project.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+/web/build
+/bin
+/export
+
+# documentation
+/docs
+
+# environments
+.env
+.env.*
+.envExample
+
+# development mode
+.babelrc
+.editorconfig
+.eslintignore
+.eslintrc.js
+.prettierrc
+.travis.yml
+/server
+/src
+/tests
+TODO.md
+config.test.js
+cypress.json
+jest.config.js
+webpack.config.*
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# gatsby files
+.cache/
+/public
+
+# misc
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
