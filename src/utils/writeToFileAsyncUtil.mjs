@@ -5,8 +5,8 @@ const {
   exportPath
 } = config;
 
-const writeToFileAsync = (extension, output) => {
-  const fullExportPath = `${exportPath}.${extension}`;
+const writeToFileAsync = ({ exportPathCustom, extension, output }) => {
+  const fullExportPath = `${exportPathCustom || exportPath}.${extension}`;
   fs.writeFile(
     fullExportPath,
     output,

@@ -1,8 +1,17 @@
+import config from './../../config.mjs';
 import {
   rgbToInt,
   rgbToHex,
 } from './colorUtil.mjs';
 import writeToFileAsync from './writeToFileAsyncUtil.mjs';
+
+const {
+  exportPathCustom: {
+    json: exportPathJson = null,
+    scss: exportPathScss = null,
+    less: exportPathLess = null,
+  } = null,
+} = config;
 
 // The name of the CANVAS containing the design tokens
 const canvasTokensName = 'Tokens';
@@ -77,20 +86,23 @@ const handleData = (response, mode) => {
   // extract values and generate color variable definitions to LESS
   const swatchesColorsExtractedLess = swatchesColors.map(c => `@${getColorName(c)}: ${getColorHex(c)};`);
   // write to JSON
-  writeToFileAsync(
-    'json',
-    prettyJSON(swatchesColorsExtractedJson),
-  );
+  writeToFileAsync({
+    exportPathCustom: exportPathJson || null,
+    extension: 'json',
+    output: prettyJSON(swatchesColorsExtractedJson),
+  });
   // write to SCSS
-  writeToFileAsync(
-    'scss',
-    swatchesColorsExtractedScss.join('\n'),
-  );
+  writeToFileAsync({
+    exportPathCustom: exportPathScss || null,
+    extension: 'scss',
+    output: swatchesColorsExtractedScss.join('\n'),
+  });
   // write to LESS
-  writeToFileAsync(
-    'less',
-    swatchesColorsExtractedLess.join('\n'),
-  );
+  writeToFileAsync({
+    exportPathCustom: exportPathLess || null,
+    extension: 'less',
+    output: swatchesColorsExtractedLess.join('\n'),
+  });
 };
 
 export default handleData;

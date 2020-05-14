@@ -41,7 +41,12 @@ const envQa = 'qa.yolo.io';
 const envTest = 'test.yolo.io';
 
 // export vars
-const exportPath = 'export/designTokens';
+const exportPath = 'src/figmatron2000/designTokens';
+const exportPathCustom = {
+  json: process.env.EXPORT_PATH_JSON,
+  scss: process.env.EXPORT_PATH_SCSS,
+  less: process.env.EXPORT_PATH_LESS,
+}
 
 const config = {
   apiEnabled: true,
@@ -54,6 +59,7 @@ const config = {
   },
   currentEnv,
   exportPath,
+  exportPathCustom,
   figmaClientId,
   hostnames: {
     prod: envProd,
