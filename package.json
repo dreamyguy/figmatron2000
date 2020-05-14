@@ -1,6 +1,6 @@
 {
   "name": "figmatron2000",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Export design tokens (font-family, font-sizes, colors, gradients, spacing variables, etc) from Figma to SCSS and/or JavaScript",
   "keywords": [
     "figma",
@@ -38,7 +38,6 @@
     "build-npm": "NODE_ENV=npm webpack --config webpack.config.npm.js",
     "postbuild-npm": "./bin/postBuildNpm.sh",
     "prePublish": "echo 🤖  About to publish to npm. This is so very exciting in a non-emotional way - *beep*",
-    "publish": "npm publish",
     "postPublish": "echo 🤖  It is done - *beep*"
   },
   "dependencies": {
