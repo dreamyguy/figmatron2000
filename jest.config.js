@@ -4,7 +4,7 @@ module.exports = {
     __PATH_PREFIX__: '',
   },
   coveragePathIgnorePatterns: ['/node_modules/'],
-  moduleFileExtensions: ['js', 'json', 'jsx', 'svg', 'ts', 'tsx', 'node'],
+  moduleFileExtensions: ['js', 'json', 'jsx', 'mjs', 'svg', 'ts', 'tsx', 'node'],
   modulePaths: ['src', 'node_modules'],
   setupFiles: ['<rootDir>/tests/setupTests.js'],
   setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
@@ -17,7 +17,7 @@ module.exports = {
     '_ignore',
   ],
   transform: {
-    '^.+\\.js?$': '<rootDir>/tests/preProcess.js', // without this there will be errors on further transforms
+    '^.+\\.m?js?$': '<rootDir>/tests/preProcess.js', // without this there will be errors on further transforms
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
       '<rootDir>/tests/fileTransformer.js',
     '\\.(css|less|scss)$': '<rootDir>/tests/fileTransformer.js',
