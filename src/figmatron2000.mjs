@@ -1,6 +1,6 @@
 import axios from 'axios';
 import config from './../config.mjs';
-import json from './../server/json/db.json'; // Access JSON directly if JSON server fails
+// import json from './../server/json/db.json'; // Access JSON directly if JSON server fails
 import setApiUrl from './utils/setApiUrlUtil.mjs';
 import handleData from './utils/handleDataUtil.mjs';
 
@@ -40,8 +40,8 @@ const figmatron2000 = () => {
       .catch(err => {
         try {
           // Fallback to getting the file directly if JSON server fails
-          response = json;
-          handleData(response, '[handleData] direct - api fallback');
+          // response = json;
+          // handleData(response, '[handleData] direct - api fallback');
         } catch (error) {
           // Both JSON server and fallback 'direct reading'
           // of the JSON file failed, print the error
@@ -51,8 +51,8 @@ const figmatron2000 = () => {
   } else {
     // If API is disabled fallback to getting the file directly if JSON server fails
     try {
-      response = json;
-      handleData(response, '[handleData] direct - api disabled');
+      // response = json;
+      // handleData(response, '[handleData] direct - api disabled');
     } catch (error) {
       console.log(error);
     }
