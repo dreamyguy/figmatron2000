@@ -1,6 +1,6 @@
 {
   "name": "figmatron2000",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Export design tokens (font-family, font-sizes, colors, gradients, spacing variables, etc) from Figma to SCSS and/or JavaScript",
   "keywords": [
     "figma",
