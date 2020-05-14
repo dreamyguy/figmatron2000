@@ -51,6 +51,7 @@ yarn-error.log*
 /public
 
 # misc
+/_ignore
 .DS_Store
 .DS_Store?
 ._*
