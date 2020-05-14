@@ -4,6 +4,7 @@
 /build
 /web/build
 /dist
+/lib
 
 # cache
 .scssc
