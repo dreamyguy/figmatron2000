@@ -14,7 +14,7 @@ describe('Test config', () => {
   });
   describe('apiUrl', () => {
     it('prod', () => {
-      expect(config.apiUrl.prod).toEqual('https://prod.yolo.io/api/v1');
+      expect(config.apiUrl.prod).toEqual('https://yolo.io/api/v1');
     });
     it('qa', () => {
       expect(config.apiUrl.qa).toEqual('https://qa.yolo.io/api/v1');
